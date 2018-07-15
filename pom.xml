@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>paginator-kata</module>
+        <module>fizz-buzz(eas)</module>
     </modules>
 
 
