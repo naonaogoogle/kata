@@ -31,4 +31,12 @@ public class Paginator {
     public boolean hasNext() {
         return currentStart + pageSize < content.length;
     }
+
+    public boolean hasPrevious() {
+        return currentStart > 0;
+    }
+
+    public void previous() {
+        currentStart = currentStart - pageSize;
+    }
 }

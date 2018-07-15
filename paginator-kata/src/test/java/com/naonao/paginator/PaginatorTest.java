@@ -55,5 +55,31 @@ public class PaginatorTest {
         assertThat(paginator.hasNext(),is(true));
     }
 
+    @Test
+    public void doesNotHavePreviousInitially() {
+        Paginator paginator = new Paginator(2,SIZE5_CONTENT);
+        assertThat(paginator.hasPrevious(),is(false));
+    }
+
+    @Test
+    public void doesHavePreviousIfOnSecondPage() {
+        Paginator paginator = new Paginator(2,SIZE5_CONTENT);
+        paginator.next();
+        assertThat(paginator.hasPrevious(),is(true));
+    }
+
+    @Test
+    public void previousFromSecondPageResultsInFirstPage() {
+        Paginator paginator = new Paginator(2,SIZE5_CONTENT);
+        paginator.next();
+        paginator.previous();
+        Object[] currentPage = paginator.currentPage();
+        assertThat(currentPage, is(of(1,2)));
+
+
+
+
+    }
+
 
 }
