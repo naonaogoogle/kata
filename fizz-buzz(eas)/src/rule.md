@@ -1,4 +1,4 @@
-Return “fizz”, “buzz” or “fizzbuzz”.
+### Return “fizz”, “buzz” or “fizzbuzz”
 
 For a given natural number greater than zero return:
 
